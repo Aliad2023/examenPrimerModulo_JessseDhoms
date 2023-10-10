@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+
+
+
+
+#container{
+    width: 100vw;
+    height: 2086px;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(12, 1fr) ;
+    @media only screen and (min-width: 1000px){
+        width: 100%;
+        height: 1080px;
+        grid-template-columns: repeat(12, 1fr);
+        
+    }
+
+
+    & .banner{
+        grid-column: 1/7;
+        grid-row: 1/3;
+        
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+    /* Móvil */
+    @media only screen and (min-width: 320px) and (max-width: 500px) and (orientation: portrait) {
+        
+
+        @media (-webkit-min-device-pixel-ratio: 1){
+            background-image: url(../img/mobile/bannerMobile.webp);
+            }
+
+        @media (-webkit-min-device-pixel-ratio: 2) {
+            background-image: url(../img/mobile/bannerMobile@2x.webp);
+            }
+
+        @media (-webkit-min-device-pixel-ratio: 3) {
+            background-image: url(../img/mobile/bannerMobiler@3x.webp);
+            }
+        }
+
+        /* ESCRITORIO */
+
+        @media only screen and (min-width: 1000px) {
+            border-radius: 0px 0px 0px 300px;
+            grid-column: 2/12;
+            grid-row: 1/7;
+
+        /* Altura común para ambos casos */
+        background-image: url(../img/desktop/bannerDesktop.webp);
+
+        @media (-webkit-max-device-pixel-ratio: 2) {
+            background-image: url(../img/desktop/bannerDesktop@2x.webp);
+            }
+        }
+    }
+
+    .articulo{
+        padding: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #AD5A2E;
+
+        grid-column: 1/7;
+        grid-row: 3/6;
+        @media only screen and (min-width: 1000px){
+            grid-column: 2/5;
+            grid-row: 8/13;
+
+        }
+    }
+
+    .linea{
+
+
+        background-color: #AD5A2E;
+        width: 90%;
+        height: 6px;
+        grid-column: 1/7;
+        grid-row: 6/span1;
+        
+
+        
+        @media only screen and (min-width: 1000px){
+            display: none;
+        }
+    }
+
+    .texto{
+        padding: 20px;
+        color: #3F1B0D;
+        font-size: 32px;
+        font-weight: 700;
+        grid-column: 1/7;
+        grid-row: 7/13;
+
+        @media only screen and (min-width: 1000px){
+            grid-column: 5/12;
+            grid-row: 8/13;
+        }
+        
+    }
+}
